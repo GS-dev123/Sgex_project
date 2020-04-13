@@ -13,9 +13,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/login', function () {
-    return view('login');
+
+Route::get('/', function () {
+    return view('curso');
+});
+Route::get('/', function () {
+    return view('estudante');
+});
+Route::get('/', function () {
+    return view('professor');
+});
+Route::get('/', function () {
+    return view('add_curso');
+});
+Route::get('/', function () {
+    return view('add_estudante');
 });
 Route::get('/', function () {
     return view('telaPrincipal');
+});
+Route::get('/', function () {
+    return view('login');
+});
+Route::get('/', function () {
+    return view('add_professor');
 });
