@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+*{
+    font-family:'Roboto', sans-serif;
+    
+}
+
+.img_center{
+    height: 320px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;  
+    margin-top: 15%;   
+}
+#menus{
+    background-color: royalblue;
+}
+a{
+    color: white;
+}
+a:hover{
+    color: red;
+    cursor: pointer;
+}
+#header1{
+    color: white;
+    margin-left: 43%;
+    
+}
+#links{
+    color: white;
+}
+#links:hover{
+    font-size: 18px;
+}
+#menus:hover{
+    background-color: #003399;
+    
+}
+
