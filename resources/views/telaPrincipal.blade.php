@@ -39,7 +39,7 @@
         
       </div>
       <nav class="navbar navbar-expand-md navbar-dark fixed-bottom" id="menus">
-          <h6 id="header1">@Team Fire | 2020</h6>
+          <h6 id="header1">&copy; Team Fire | 2020 </h6>
 
 </nav>
       
