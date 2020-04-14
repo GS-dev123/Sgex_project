@@ -10,6 +10,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../css/home_style.css">
     <link rel="stylesheet" href="../css/professor_style.css">
+    <link rel="stylesheet" href="../css/table_style.css">
 </head>
 <body>
     <!-- NavBar-Menu-->
@@ -39,6 +40,53 @@
 
 
 <a href ="/professor/add" class="btn btn-lg btn-primary">Crie Novo Professor</a>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+      <th scope="col">Handle2</th>
+      <th scope="col">Accao</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>Scope1</td>
+      <td>x</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+      <td>Scope2</td>
+      <td>w</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+      <td>Scope3</td>
+      <td>y</td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td>Larson</td>
+      <td>the Ice</td>
+      <td>@twitt</td>
+      <td>Scope4</td>
+      <td>z</td>
+    </tr>
+  </tbody>
+</table>
     
 
 
