@@ -59,7 +59,7 @@
       <td>5anos</td>
       <td>51</td>
       <td>5000,00</td>
-      <td><a href="#" class="btn btn-sm btn-warning">Editar</a><a href="#" class="btn btn-sm btn-danger">Apagar</a></td>
+      <td><a href="#" class="btn btn-sm btn-success">Visualizar</a><a href="#" class="btn btn-sm btn-warning">Editar</a><a href="#" class="btn btn-sm btn-danger">Apagar</a></td>
     </tr>
   </tbody>
 </table>

@@ -59,7 +59,7 @@
       <td>05/12/1994</td>
       <td>824024486</td>
       <td>Zimpeto</td>
-      <td><a href="#" class="btn btn-sm btn-warning">Editar</a><a href="#" class="btn btn-sm btn-danger">Apagar</a></td>
+      <td><a href="#" class="btn btn-sm btn-success">Visualizar</a><a href="#" class="btn btn-sm btn-warning">Editar</a><a href="#" class="btn btn-sm btn-danger">Apagar</a></td>
     </tr>
   </tbody>
 </table>

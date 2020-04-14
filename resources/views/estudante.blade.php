@@ -60,7 +60,7 @@
       <td>824024486</td>
       <td>Eng Informatica</td>
       <td>Zimpeto</td>
-      <td><a href="#" class="btn btn-sm btn-warning">Editar</a><a href="#" class="btn btn-sm btn-danger">Apagar</a></td>
+      <td><a href="#" class="btn btn-sm btn-success">Visualizar</a><a href="#" class="btn btn-sm btn-warning">Editar</a><a href="#" class="btn btn-sm btn-danger">Apagar</a></td>
     </tr>
   </tbody>
 </table>

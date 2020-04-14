@@ -5,6 +5,7 @@
     margin-right: auto;
 }
 .btn-warning{
+    margin-left: 8px;
     color: white;
 }
 .btn-warning:hover{
