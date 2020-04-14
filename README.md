@@ -77,3 +77,11 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+## Como Rodar o Projecto
+
+Ao baixar o projecto neste repositorio a dois comandos primordiais para rodar o projecto:
+1. composer install - este comando instala todos os pacotes php necessarios 
+2. php artisan Key:generate - este comando vai gerar uma chave para aplicacao. sem isso o laravel nao funciona.
