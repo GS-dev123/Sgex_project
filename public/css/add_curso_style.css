@@ -50,10 +50,12 @@ body{
 .form-check-label{
     color:gray;
 }
+#bt_back{
+    color: royalblue;
+    margin-top: 5px;
+}
 .desc{
     text-align: center;
-    margin-top: 15px;
     color: rgb(85, 85, 85);
     font-weight: bold;
-    margin-top: 29px;
 }

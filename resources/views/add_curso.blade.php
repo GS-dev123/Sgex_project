@@ -10,6 +10,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../css/home_style.css">
     <link rel="stylesheet" href="../css/add_curso_style.css">
+    <link type="text/css" rel="stylesheet" href="{{ mix('css/app.css') }}">
 </head>
 <body>
     <!-- NavBar-Menu-->
@@ -36,6 +37,9 @@
   </div>
 </nav>
 
+<a href ="/curso" class="btn btn-lg">
+    <i class="fas fa-arrow-circle-left fa-2x"  id="bt_back"></i>
+  </a>
 <!-- Formulario  -->
 <h2 class="desc">Crie Novo Curso</h6>
 

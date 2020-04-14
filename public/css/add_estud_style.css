@@ -23,6 +23,7 @@ body{
     padding: 1px 0px 6px 2px;
 	border-radius: 8px;
 }
+
 .btn-danger{
     position: relative;
     width: 96px;
@@ -36,11 +37,8 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 2%;
+    margin-top: auto;
     width: 450px;
-    
-  
-
 }
 .form-check-input{
     margin-bottom: 20px;
@@ -50,10 +48,12 @@ body{
 .form-check-label{
     color:gray;
 }
+#bt_back{
+    color: royalblue;
+    margin-top: 5px;
+}
 .desc{
-    text-align: center;
-    margin-top: 15px;
     color: rgb(85, 85, 85);
     font-weight: bold;
-    margin-top: 29px;
+    text-align: center;
 }
