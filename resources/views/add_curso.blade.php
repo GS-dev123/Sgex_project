@@ -40,22 +40,23 @@
 <h2 class="desc">Crie Novo Curso</h6>
 
 <div class="container">
-       <form>
+       <form method="post" action="{{ route('curso.store') }}">
+         @csrf
          <div class="form-group">
              <label for="inputNome">Nome</label>
-           <input type="text" class="form-control" id="InputNome">
+           <input type="text" class="form-control" id="InputNome" name="nome">
          </div>
          <div class="form-group">
          <label for="inputDataNascimento">Duração</label>
-           <input type="number" class="form-control" id="inputDataNascimento">
+           <input type="text" class="form-control" id="inputDataNascimento" name="duracao">
          </div>
          <div class="form-group">
          <label for="inputNrDisc">Número de Disciplinas</label>
-           <input type="number" class="form-control" id="inputNrDisc">
+           <input type="text" class="form-control" id="inputNrDisc" name="numero_de_disciplinas">
          </div>
          <div class="form-group">
          <label for="inputPreco">Preço</label>
-           <input type="text" class="form-control" id="inputPreco">
+           <input type="text" class="form-control" id="inputPreco" name="preco">
          </div>
          <div class="form-row">
     <div class="form-group col-md-6">

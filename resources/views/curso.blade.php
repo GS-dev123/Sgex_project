@@ -53,14 +53,24 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
+    <!--<tr>
       <th scope="row">1</th>
       <td>Eng Informatica</td>
       <td>5anos</td>
       <td>51</td>
       <td>5000,00</td>
       <td><a href="#" class="btn btn-sm btn-success">Visualizar</a><a href="#" class="btn btn-sm btn-warning">Editar</a><a href="#" class="btn btn-sm btn-danger">Apagar</a></td>
-    </tr>
+    </tr> -->
+    @foreach($cursos as $curso)
+        <tr>
+            <td>{{$curso->id}}</td>
+            <td>{{$curso->nome}}</td>
+            <td>{{$curso->duracao}}</td>
+            <td>{{$curso->numero_de_disciplinas}}</td>
+            <td>{{$curso->preco}}</td>
+            <td><a href="#" class="btn btn-sm btn-success">Visualizar</a><a href="#" class="btn btn-sm btn-warning">Editar</a><a href="{{ route('curso.destroy', $curso->id)}}" class="btn btn-sm btn-danger">Apagar</a></td>
+        </tr>
+    @endforeach
   </tbody>
 </table>
 
