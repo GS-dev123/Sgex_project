@@ -1,3 +1,15 @@
 .table{
-    margin-top: 90px;
+    margin-top: 110px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn-warning{
+    color: white;
+}
+.btn-warning:hover{
+    color: white;
+}
+.btn-danger{
+    margin-left: 8px;
 }

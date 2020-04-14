@@ -45,45 +45,21 @@
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-      <th scope="col">Handle2</th>
-      <th scope="col">Accao</th>
+      <th scope="col">Nome Completo</th>
+      <th scope="col">Data de Nascimento</th>
+      <th scope="col">Contacto</th>
+      <th scope="col">Localização</th>
+      <th scope="col">Acção</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>Scope1</td>
-      <td>x</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-      <td>Scope2</td>
-      <td>w</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-      <td>Scope3</td>
-      <td>y</td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>Larson</td>
-      <td>the Ice</td>
-      <td>@twitt</td>
-      <td>Scope4</td>
-      <td>z</td>
+      <td>Germildo Silva</td>
+      <td>05/12/1994</td>
+      <td>824024486</td>
+      <td>Zimpeto</td>
+      <td><a href="#" class="btn btn-sm btn-warning">Editar</a><a href="#" class="btn btn-sm btn-danger">Apagar</a></td>
     </tr>
   </tbody>
 </table>

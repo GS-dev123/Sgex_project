@@ -50,7 +50,7 @@
            <input type="number" class="form-control" id="inputDataNascimento">
          </div>
          <div class="form-group">
-         <label for="inputNrDisc">Número de discilinas</label>
+         <label for="inputNrDisc">Número de Disciplinas</label>
            <input type="number" class="form-control" id="inputNrDisc">
          </div>
          <div class="form-group">
