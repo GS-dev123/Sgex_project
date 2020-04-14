@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>add_professor</title>
+    <title>Professor</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -21,16 +21,16 @@
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0" >
       <li class="nav-item active">
-        <a class="nav-link" href="#" id="links">Home</a>
+        <a class="nav-link" href="/home" id="links">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" id="links">Estudante</a>
+        <a class="nav-link" href="/estudante" id="links">Estudante</a>
       </li>
       <li class="nav-item">
-      <a class="nav-link" href="# " id="links">Curso</a>
+      <a class="nav-link" href="/curso" id="links">Curso</a>
       </li>
       <li class="nav-item">
-      <a class="nav-link" href="#" id="links">Professor</a>
+      <a class="nav-link" href="/professor" id="links">Professor</a>
       </li>
     </ul>
   </div>
@@ -38,7 +38,7 @@
 <!-- Formulario  -->
 
 
-<a href ="add_curso" class="btn btn-lg btn-primary">Crie Novo Professor</a>
+<a href ="/professor/add" class="btn btn-lg btn-primary">Crie Novo Professor</a>
     
 
 
@@ -48,8 +48,7 @@
     <!-- Rodape -->
       <nav class="navbar navbar-expand-md navbar-dark fixed-bottom" id="menus">
           <h6 id="header1">&copy; Team Fire | 2020 </h6>
-
-</nav>
+      </nav>
       
       </body>
       </html>

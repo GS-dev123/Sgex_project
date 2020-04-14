@@ -14,27 +14,27 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', function () {
+Route::get('/curso', function () {
     return view('curso');
 });
-Route::get('/', function () {
+Route::get('/estudante', function () {
     return view('estudante');
 });
-Route::get('/', function () {
+Route::get('/professor', function () {
     return view('professor');
 });
-Route::get('/', function () {
+Route::get('/curso/add', function () {
     return view('add_curso');
 });
-Route::get('/', function () {
+Route::get('/estudante/add', function () {
     return view('add_estudante');
 });
-Route::get('/', function () {
+Route::get('/home', function () {
     return view('telaPrincipal');
 });
 Route::get('/', function () {
     return view('login');
 });
-Route::get('/', function () {
+Route::get('/professor/add', function () {
     return view('add_professor');
 });

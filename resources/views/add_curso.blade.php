@@ -21,16 +21,16 @@
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0" >
       <li class="nav-item active">
-        <a class="nav-link" href="#" id="links">Home</a>
+        <a class="nav-link" href="/home" id="links">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" id="links">Estudante</a>
+        <a class="nav-link" href="/estudante" id="links">Estudante</a>
       </li>
       <li class="nav-item">
-      <a class="nav-link" href="# " id="links">Curso</a>
+      <a class="nav-link" href="/curso" id="links">Curso</a>
       </li>
       <li class="nav-item">
-      <a class="nav-link" href="#" id="links">Professor</a>
+      <a class="nav-link" href="/professor" id="links">Professor</a>
       </li>
     </ul>
   </div>
