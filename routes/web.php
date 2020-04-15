@@ -31,12 +31,13 @@ Route::get('/curso/{id}','CursoController@destroy')->name('curso.destroy');
 Route::get('/estudante/add', function () {
     return view('add_estudante');
 });
-Route::get('/home', function () {
-    return view('telaPrincipal');
-});
+
 Route::get('/', function () {
     return view('login');
 });
 Route::get('/professor/add', function () {
     return view('add_professor');
+});
+Route::get('/', function () {
+    return view('telaPrincipal');
 });

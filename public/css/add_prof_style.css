@@ -31,6 +31,7 @@ body{
 	border-radius: 8px;
 }
 .container{
+    box-shadow: 0 3px 5px 0 #E8E8E8, 0 2px 15px 0 #E8E8E8;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,6 +41,10 @@ body{
     border-radius: 8px;
   
 
+}
+#bt_back{
+    color: royalblue;
+    margin-top: 5px;
 }
 .form-check-input{
     margin-bottom: 20px;
@@ -51,9 +56,6 @@ body{
 }
 .desc{
     text-align: center;
-    margin-top: 15px;
     color: rgb(85, 85, 85);
     font-weight: bold;
-    margin-top: 29px;
-    /*text-shadow: 1px 1px royalblue;*/
 }
