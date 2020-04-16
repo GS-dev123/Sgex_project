@@ -23,13 +23,13 @@ Route::get('/curso/add','CursoController@create')->name('curso.create');
 Route::post('/curso/add', 'CursoController@store')->name('curso.store');
 Route::get('/curso/{id}','CursoController@destroy')->name('curso.destroy');
 
-Route::get('/professor','professorController@index')->name('professor.index');
-Route::get('/professor/add','professorController@create')->name('professor.create');
-Route::post('professor', 'professorController@store')->name('professor.store');
-Route::post('professor/{id}', 'professorController@show')->name('professor.show');
-Route::post('professor/{id}', 'professorController@edit')->name('professor.edit');
-Route::get('/professor/{id}','professorController@destroy')->name('professor.destroy');
-Route::patch('/professor/{id}','professorController@update')->name('professor.update');
+Route::get('/professor','ProfessorController@index')->name('professor.index');
+Route::get('/professor/add','ProfessorController@create')->name('professor.create');
+Route::post('professor', 'ProfessorController@store')->name('professor.store');
+Route::post('professor/{id}', 'ProfessorController@show')->name('professor.show');
+Route::post('professor/{id}', 'ProfessorController@edit')->name('professor.edit');
+Route::get('/professor/{id}','ProfessorController@destroy')->name('professor.destroy');
+Route::patch('/professor/{id}','ProfessorController@update')->name('professor.update');
 
 
 
