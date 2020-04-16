@@ -38,7 +38,7 @@ class professorController extends Controller
     {
         $data = [
             'nome_completo' => request('nome_completo'),
-            'data_nascimento' => request('data_nascimento'),
+            'data_de_nascimento' => request('data_de_nascimento'),
             'contacto' => request('contacto'),
             'localizacao' => request('localizacao')
         ];
@@ -80,7 +80,7 @@ class professorController extends Controller
     {
 
         $professor->nome_completo = $request->nome_completo;
-        $professor->data_nascimento = $request->data_nascimento;
+        $professor->data_nascimento = $request->data_de_nascimento;
         $professor->contacto = $request->contacto;
         $professor->localizacao = $request->localizacao;
         $professor->save();
