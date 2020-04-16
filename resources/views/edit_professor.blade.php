@@ -44,7 +44,7 @@
 
 <div class="container">
        <form method="post" action="{{ route('professor.update',$professor->id) }}">
-       @method('PATCH')
+       @method('PATCH') 
        @csrf
          <div class="form-group">
              <label for="inputNome">Nome Completo</label>

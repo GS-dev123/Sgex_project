@@ -26,7 +26,7 @@ Route::get('/curso/{id}','CursoController@destroy')->name('curso.destroy');
 
 
 
-Route::resource('professors','ProfessorController');
+/*Route::resource('professor','ProfessorController');*/
 Route::get('/professor','ProfessorController@index')->name('professor.index');
 Route::get('/professor/add','ProfessorController@create')->name('professor.create');
 Route::post('/professor/add','ProfessorController@store')->name('professor.store');

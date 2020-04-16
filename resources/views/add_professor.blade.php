@@ -43,7 +43,7 @@
 <!-- Formulario  -->
 
 <div class="container">
-       <form method="post" action="{{ route(professor.store') }}">
+       <form method="post" action="{{ route('professor.store') }}">
        @csrf
          <div class="form-group">
              <label for="inputNome">Nome Completo</label>
