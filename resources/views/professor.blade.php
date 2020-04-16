@@ -44,7 +44,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col">#</th>
+      <th scope="col">ID</th>
       <th scope="col">Nome Completo</th>
       <th scope="col">Data de Nascimento</th>
       <th scope="col">Contacto</th>
@@ -53,16 +53,19 @@
     </tr>
   </thead>
   <tbody>
+  @foreach ($professores as $professor)
     <tr>
-      <th scope="row">1</th>
-      <td>Germildo Silva</td>
-      <td>05/12/1994</td>
-      <td>824024486</td>
-      <td>Zimpeto</td>
-      <td><a href="#" class="btn btn-sm btn-success">Visualizar</a><a href="#" class="btn btn-sm btn-warning">Editar</a><a href="#" class="btn btn-sm btn-danger">Apagar</a></td>
+      <td>{{$professor->id}}</td>
+      <td>{{$professor->nome_completo}}</td>
+      <td>{{$professor->data_nascimento}}</td>
+      <td>{{$professor->contacto}}</td>
+      <td>{{$professor->localizacao}}</td>
+      <td><a href="#" class="btn btn-sm btn-success">Visualizar</a><a href="#" class="btn btn-sm btn-warning">Editar</a><a href="{{ route('professor.destroy', $professor->id)}}" class="btn btn-sm btn-danger">Apagar</a></td>   
     </tr>
+    @endforeach
   </tbody>
 </table>
+
     
 
 
