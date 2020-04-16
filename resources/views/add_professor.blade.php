@@ -43,22 +43,23 @@
 <!-- Formulario  -->
 
 <div class="container">
-       <form>
+       <form method="post" action="{{ route(professor.store') }}">
+       @csrf
          <div class="form-group">
              <label for="inputNome">Nome Completo</label>
-           <input type="text" class="form-control" id="InputNome">
+           <input type="text" class="form-control" id="InputNome" name="nome_completo">
          </div>
          <div class="form-group">
          <label for="inputDataNascimento">Data Nascimento</label>
-           <input type="date" class="form-control" id="inputDataNascimento">
+           <input type="date" class="form-control" id="inputDataNascimento" name="data_de_nascimento">
          </div>
          <div class="form-group">
          <label for="inputContacto">Contacto</label>
-           <input type="text" class="form-control" id="inputContacto">
+           <input type="text" class="form-control" id="inputContacto" name="contacto">
          </div>
          <div class="form-group">
          <label for="inputLocalizacao">Localização</label>
-           <input type="text" class="form-control" id="inputLocalizacao">
+           <input type="text" class="form-control" id="inputLocalizacao" name="localizacao">
          </div>
          <div class="form-row">
     <div class="form-group col-md-6">

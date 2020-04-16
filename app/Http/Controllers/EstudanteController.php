@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\curso;
+use App\estudante;
 use Illuminate\Http\Request;
 
-class CursoController extends Controller
+class EstudanteController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,7 @@ class CursoController extends Controller
      */
     public function index()
     {
-        $cursos = Curso::all();
-
-        return view('curso', compact('cursos'));
+        //
     }
 
     /**
@@ -26,7 +24,7 @@ class CursoController extends Controller
      */
     public function create()
     {
-        return view('add_curso');
+        //
     }
 
     /**
@@ -37,32 +35,16 @@ class CursoController extends Controller
      */
     public function store(Request $request)
     {
-        
-        $request->validate([
-            'nome'=>'required',
-            'duracao'=>'required',
-            'numero_de_disciplinas'=>'required',
-            'preco'=>'required',
-        ]);
-
-        $curso = new Curso([
-            'nome' => $request->get('nome'),
-            'duracao' => $request->get('duracao'),
-            'numero_de_disciplinas' => $request->get('numero_de_disciplinas'),
-            'preco' => $request->get('preco')
-           
-        ]);
-        $curso->save();
-        return redirect('/curso')->with('message', 'Curso registado com sucesso!');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\estudante  $estudante
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(estudante $estudante)
     {
         //
     }
@@ -70,37 +52,34 @@ class CursoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\estudante  $estudante
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(estudante $estudante)
     {
-       
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\estudante  $estudante
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, estudante $estudante)
     {
-       
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\estudante  $estudante
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(estudante $estudante)
     {
-        $curso = curso::find($id);
-        $curso->delete();
-
-        return redirect('/curso')->with('message', 'curso deletado com sucesso!');
+        //
     }
 }

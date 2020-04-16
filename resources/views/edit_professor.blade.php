@@ -9,8 +9,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../css/home_style.css">
-    <link rel="stylesheet" href="../css/professor_style.css">
-    <link rel="stylesheet" href="../css/table_style.css">
+    <link rel="stylesheet" href="../css/add_prof_style.css">
+    <link type="text/css" rel="stylesheet" href="{{ mix('css/app.css') }}">
 </head>
 <body>
     <!-- NavBar-Menu-->
@@ -28,7 +28,7 @@
         <a class="nav-link" href="/estudante" id="links">Estudante</a>
       </li>
       <li class="nav-item">
-      <a class="nav-link" href="/curso" id="links">Curso</a>
+      <a class="nav-link" href="/curso " id="links">Curso</a>
       </li>
       <li class="nav-item">
       <a class="nav-link" href="/professor" id="links">Professor</a>
@@ -36,45 +36,44 @@
     </ul>
   </div>
 </nav>
+<a href ="/professor" class="btn btn-lg">
+    <i class="fas fa-arrow-circle-left fa-2x"  id="bt_back"></i>
+  </a>
+<h2 class="desc">Edite o Professor</h6>
 <!-- Formulario  -->
 
-
-<a href ="/professor/add" class="btn btn-lg btn-primary">Crie Novo Professor</a>
-
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Nome Completo</th>
-      <th scope="col">Data de Nascimento</th>
-      <th scope="col">Contacto</th>
-      <th scope="col">Localização</th>
-      <th scope="col">Acção</th>
-    </tr>
-  </thead>
-  <tbody>
-    <!--<tr>
-      <th scope="row">1</th>
-      <td>Germildo Silva</td>
-      <td>05/12/1994</td>
-      <td>824024486</td>
-      <td>Zimpeto</td>
-      <td><a href="#" class="btn btn-sm btn-success">Visualizar</a><a href="/professor/edit" class="btn btn-sm btn-warning">Editar</a><a href="#" class="btn btn-sm btn-danger">Apagar</a></td>
-    </tr>-->
-    @foreach($professors as $professor)
-        <tr>
-            <td>{{$professor->id}}</td>
-            <td>{{$professor->nome_completo}}</td>
-            <td>{{$professor->data_de_nascimento}}</td>
-            <td>{{$professor->contacto}}</td>
-            <td>{{$professor->localizacao}}</td>
-            <td><a href="#" class="btn btn-sm btn-success">Visualizar</a><a href="{{ route('professor.edit',$professor->id)}}" class="btn btn-sm btn-warning">Editar</a><a href="{{ route('professor.destroy',$professor->id) }}" class="btn btn-sm btn-danger">Apagar</a>
-            </td>
-          </tr>
-      @endforeach
-  </tbody>
-</table>
-    
+<div class="container">
+       <form method="post" action="{{ route('professor.update',$professor->id) }}">
+       @method('PATCH')
+       @csrf
+         <div class="form-group">
+             <label for="inputNome">Nome Completo</label>
+           <input type="text" class="form-control" id="InputNome" value={{ $professor->nome_completo }}>
+         </div>
+         <div class="form-group">
+         <label for="inputDataNascimento">Data Nascimento</label>
+           <input type="date" class="form-control" id="inputDataNascimento" value={{ $professor->data_de_nascimento }}>
+         </div>
+         <div class="form-group">
+         <label for="inputContacto">Contacto</label>
+           <input type="text" class="form-control" id="inputContacto" value={{ $professor->contacto }}>
+         </div>
+         <div class="form-group">
+         <label for="inputLocalizacao">Localização</label>
+           <input type="text" class="form-control" id="inputLocalizacao" value={{ $professor->localizacao }}>
+         </div>
+         <div class="form-row">
+    <div class="form-group col-md-6">
+    <button type="submit" class="btn btn-lg btn-primary">Gravar</button>
+    </div>
+    <div class="form-group col-md-6">
+    <button type="clean" class="btn btn-lg btn-danger">Limpar</button>
+    </div>
+  </div>
+         
+         
+       </form>
+     </div>
 
 
 
@@ -83,7 +82,8 @@
     <!-- Rodape -->
       <nav class="navbar navbar-expand-md navbar-dark fixed-bottom" id="menus">
           <h6 id="header1">&copy; Team Fire | 2020 </h6>
-      </nav>
+
+</nav>
       
       </body>
       </html>

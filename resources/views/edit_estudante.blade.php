@@ -9,8 +9,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../css/home_style.css">
-    <link rel="stylesheet" href="../css/professor_style.css">
-    <link rel="stylesheet" href="../css/table_style.css">
+    <link rel="stylesheet" href="../css/add_estud_style.css">
+    <link type="text/css" rel="stylesheet" href="{{ mix('css/app.css') }}">
 </head>
 <body>
     <!-- NavBar-Menu-->
@@ -36,34 +36,55 @@
     </ul>
   </div>
 </nav>
+
 <!-- Formulario  -->
 
+    <a href ="/estudante" class="btn btn-lg"><i class="fas fa-arrow-circle-left fa-2x"  id="bt_back"></i></a>
 
-        <a href ="/estudante/add" class="btn btn-lg btn-primary">Crie Novo Estudante</a>
-        <table class="table table-striped">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Nome Completo</th>
-      <th scope="col">Data de Nascimento</th>
-      <th scope="col">Contacto</th>
-      <th scope="col">Curso</th>
-      <th scope="col">Localização</th>
-      <th scope="col">Acção</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Germildo Silva</td>
-      <td>05/12/1994</td>
-      <td>824024486</td>
-      <td>Eng Informatica</td>
-      <td>Zimpeto</td>
-      <td><a href="#" class="btn btn-sm btn-success">Visualizar</a><a href="/estudante/edit" class="btn btn-sm btn-warning">Editar</a><a href="#" class="btn btn-sm btn-danger">Apagar</a></td>
-    </tr>
-  </tbody>
-</table>
+
+  <h2 class="desc">Edit o Estudante</h6>
+
+<div class="container">
+
+       <form>
+         <div class="form-group">
+             <label for="inputNome">Nome Completo</label>
+           <input type="text" class="form-control" id="InputNome">
+         </div>
+         <div class="form-group">
+         <label for="inputDataNascimento">Data Nascimento</label>
+           <input type="date" class="form-control" id="inputDataNascimento">
+         </div>
+         <div class="form-group">
+         <label for="inputContacto">Contacto</label>
+           <input type="text" class="form-control" id="inputContacto">
+         </div>
+         <div class="form-group">
+         <label for="inputCurso">Curso</label><br>
+         <select class="form-control" id="exampleFormControlSelect1">
+      <option>Selecione curso</option>    
+      <option>Informatica</option>
+      <option>Biologia</option>
+      <option>Matematica</option>
+      <option>.....</option>
+    </select>
+         </div>
+         <div class="form-group">
+         <label for="inputLocalizacao">Localização</label>
+           <input type="text" class="form-control" id="inputLocalizacao">
+         </div>
+         <div class="form-row">
+    <div class="form-group col-md-6">
+    <button type="submit" class="btn btn-lg btn-primary">Gravar</button>
+    </div>
+    <div class="form-group col-md-6">
+    <button type="clean" class="btn btn-lg btn-danger">Limpar</button>
+    </div>
+  </div>
+         
+         
+       </form>
+     </div>
 
 
 

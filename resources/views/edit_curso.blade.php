@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estudante</title>
+    <title>Novo curso</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../css/home_style.css">
-    <link rel="stylesheet" href="../css/professor_style.css">
-    <link rel="stylesheet" href="../css/table_style.css">
+    <link rel="stylesheet" href="../css/add_curso_style.css">
+    <link type="text/css" rel="stylesheet" href="{{ mix('css/app.css') }}">
 </head>
 <body>
     <!-- NavBar-Menu-->
@@ -36,34 +36,42 @@
     </ul>
   </div>
 </nav>
+<a href ="/curso" class="btn btn-lg">
+    <i class="fas fa-arrow-circle-left fa-2x"  id="bt_back"></i>
+  </a>
 <!-- Formulario  -->
+<h2 class="desc">Edite o Curso</h6>
 
-
-        <a href ="/estudante/add" class="btn btn-lg btn-primary">Crie Novo Estudante</a>
-        <table class="table table-striped">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Nome Completo</th>
-      <th scope="col">Data de Nascimento</th>
-      <th scope="col">Contacto</th>
-      <th scope="col">Curso</th>
-      <th scope="col">Localização</th>
-      <th scope="col">Acção</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Germildo Silva</td>
-      <td>05/12/1994</td>
-      <td>824024486</td>
-      <td>Eng Informatica</td>
-      <td>Zimpeto</td>
-      <td><a href="#" class="btn btn-sm btn-success">Visualizar</a><a href="/estudante/edit" class="btn btn-sm btn-warning">Editar</a><a href="#" class="btn btn-sm btn-danger">Apagar</a></td>
-    </tr>
-  </tbody>
-</table>
+<div class="container">
+       <form method="post" action="{{ route('curso.update') }}">
+          @csrf
+          @method('PUT')
+         <div class="form-group">
+             <label for="inputNome">Nome</label>
+           <input type="text" class="form-control" id="InputNome" name="nome" value="{{$curso->nome}}">
+         </div>
+         <div class="form-group">
+         <label for="inputDataNascimento">Duração</label>
+           <input type="text" class="form-control" id="inputDataNascimento" name="duracao" value="{{$curso->duracao}}">
+         </div>
+         <div class="form-group">
+         <label for="inputNrDisc">Número de Disciplinas</label>
+           <input type="text" class="form-control" id="inputNrDisc" name="numero_de_disciplinas" value="{{$curso->numero_de_disciplinas}}">
+         </div>
+         <div class="form-group">
+         <label for="inputPreco">Preço</label>
+           <input type="text" class="form-control" id="inputPreco" name="preco" value="{{$curso->preco}}">
+         </div>
+         <div class="form-row">
+    <div class="form-group col-md-6">
+    <button type="submit" class="btn btn-lg btn-primary">Gravar</button>
+    </div>
+    <div class="form-group col-md-6">
+    <button type="clean" class="btn btn-lg btn-danger">Limpar</button>
+    </div>
+  </div>     
+       </form>
+</div>
 
 
 
