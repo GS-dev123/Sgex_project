@@ -54,15 +54,6 @@
     </tr>
   </thead>
   <tbody>
-<<<<<<< HEAD
-    <!--<tr>
-      <th scope="row">1</th>
-      <td>Germildo Silva</td>
-      <td>05/12/1994</td>
-      <td>824024486</td>
-      <td>Zimpeto</td>
-      <td><a href="#" class="btn btn-sm btn-success">Visualizar</a><a href="/professor/edit" class="btn btn-sm btn-warning">Editar</a><a href="#" class="btn btn-sm btn-danger">Apagar</a></td>
-    </tr>-->
     @foreach($professors as $professor)
         <tr>
             <td>{{$professor->id}}</td>
@@ -76,18 +67,6 @@
             </td>
           </tr>
       @endforeach
-=======
-  @foreach ($professores as $professor)
-    <tr>
-      <td>{{$professor->id}}</td>
-      <td>{{$professor->nome_completo}}</td>
-      <td>{{$professor->data_nascimento}}</td>
-      <td>{{$professor->contacto}}</td>
-      <td>{{$professor->localizacao}}</td>
-      <td><a href="#" class="btn btn-sm btn-success">Visualizar</a><a href="#" class="btn btn-sm btn-warning">Editar</a><a href="{{ route('professor.destroy', $professor->id)}}" class="btn btn-sm btn-danger">Apagar</a></td>   
-    </tr>
-    @endforeach
->>>>>>> 55f4bf6b32ede8ff5a1e56b5ed26f88a8972999a
   </tbody>
 </table>
 
