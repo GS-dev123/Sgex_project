@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../css/home_style.css">
     <link rel="stylesheet" href="../css/professor_style.css">
     <link rel="stylesheet" href="../css/table_style.css">
+    <link type="text/css" rel="stylesheet" href="{{ mix('css/app.css') }}">
 </head>
 <body>
     <!-- NavBar-Menu-->
@@ -60,9 +61,10 @@
             <td>{{$curso->duracao}}</td>
             <td>{{$curso->numero_de_disciplinas}}</td>
             <td>{{$curso->preco}}</td>
-            <td><a href="#" class="btn btn-sm btn-success">Visualizar</a><a href="#" class="btn btn-sm btn-warning">Editar</a>
+            <td><a href="#" class="btn btn-sm btn-success"><i class="far fa-eye"></i></a>
+            <a href="#" class="btn btn-sm btn-warning"><i class="fas fa-pencil-alt"></i></a>
             @method('DELETE')
-            <a href="{{ route('curso.destroy', $curso->id)}}" class="btn btn-sm btn-danger">Apagar</a></td>
+            <a href="{{ route('curso.destroy', $curso->id)}}" class="btn btn-sm btn-danger"><i class="far fa-trash-alt"></i></a></td>
         </tr>
     @endforeach
   </tbody>

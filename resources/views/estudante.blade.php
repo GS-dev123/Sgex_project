@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../css/home_style.css">
     <link rel="stylesheet" href="../css/professor_style.css">
     <link rel="stylesheet" href="../css/table_style.css">
+    <link type="text/css" rel="stylesheet" href="{{ mix('css/app.css') }}">
 </head>
 <body>
     <!-- NavBar-Menu-->
@@ -55,12 +56,12 @@
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td>Germildo Silva</td>
+      <td>Germildo</td>
       <td>05/12/1994</td>
       <td>824024486</td>
-      <td>Eng Informatica</td>
+      <td>Informatica</td>
       <td>Zimpeto</td>
-      <td><a href="#" class="btn btn-sm btn-success">Visualizar</a><a href="/estudante/edit" class="btn btn-sm btn-warning">Editar</a><a href="#" class="btn btn-sm btn-danger">Apagar</a></td>
+      <td><a href="#" class="btn btn-sm btn-success"><i class="far fa-eye"></i></a><a href="/estudante/edit" class="btn btn-sm btn-warning"><i class="fas fa-pencil-alt"></i></a><a href="#" class="btn btn-sm btn-danger"><i class="far fa-trash-alt"></i></a></td>
     </tr>
   </tbody>
 </table>

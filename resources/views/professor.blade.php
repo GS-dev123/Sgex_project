@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../css/home_style.css">
     <link rel="stylesheet" href="../css/professor_style.css">
     <link rel="stylesheet" href="../css/table_style.css">
+    <link type="text/css" rel="stylesheet" href="{{ mix('css/app.css') }}">
 </head>
 <body>
     <!-- NavBar-Menu-->
@@ -68,7 +69,9 @@
             <td>{{$professor->data_de_nascimento}}</td>
             <td>{{$professor->contacto}}</td>
             <td>{{$professor->localizacao}}</td>
-            <td><a href="#" class="btn btn-sm btn-success">Visualizar</a><a href="{{ route('professor.edit',$professor->id)}}" class="btn btn-sm btn-warning">Editar</a><a href="{{ route('professor.destroy',$professor->id) }}" class="btn btn-sm btn-danger">Apagar</a>
+            <td><a href="#" class="btn btn-sm btn-success"><i class="far fa-eye"></i></a>
+            <a href="{{ route('professor.edit',$professor->id)}}" class="btn btn-sm btn-warning"><i class="fas fa-pencil-alt"></i></a>
+            <a href="{{ route('professor.destroy',$professor->id) }}" class="btn btn-sm btn-danger"><i class="far fa-trash-alt"></i></a>
             </td>
           </tr>
       @endforeach
