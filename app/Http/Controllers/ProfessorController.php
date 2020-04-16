@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\professor;
 use Illuminate\Http\Request;
 
 class ProfessorController extends Controller
@@ -61,12 +60,6 @@ class ProfessorController extends Controller
  
     public function update(Request $request, $id)
     {
-        $request->validate([
-            'nome_completo'=>'required',
-            'data_de_nascimento'=>'required',
-            'contacto'=>'required',
-            'localizacao'=>'required',
-        ]);
 
         $professor = Professor::find($id);
         $professor->nome_completo =  $request->get('nome_completo');
@@ -74,11 +67,9 @@ class ProfessorController extends Controller
         $professor->contacto = $request->get('contacto');
         $professor->localizacao = $request->get('localizacao');
         $professor->save();
-
-        return redirect('/professor')->with('success', 'professor actualizado com sucesso!');
+        return redirect('/professor')->with('sucess', 'Dados actualizados com sucesso');
     }
 
-   
     public function destroy($id)
     {
         $professor = Professor::find($id);
