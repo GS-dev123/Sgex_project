@@ -43,6 +43,7 @@
 <!-- Formulario  -->
 
 <div class="container">
+<<<<<<< HEAD
        <form method="post" action="{{ route('professor.store') }}">
        @csrf
          <div class="form-group">
@@ -52,6 +53,18 @@
          <div class="form-group">
          <label for="inputDataNascimento">Data Nascimento</label>
            <input type="date" class="form-control" id="inputDataNascimento" name="data_de_nascimento">
+=======
+       <form method="post" action="{{ route('professor.store')}}">
+      
+       @csrf
+         <div class="form-group">
+             <label for="inputNome">Nome Completo</label>
+           <input type="text" class="form-control" id="InputNome" name="nome_completo"> 
+         </div>
+         <div class="form-group">
+         <label for="inputDataNascimento">Data Nascimento</label>
+           <input type="text" class="form-control" id="inputDataNascimento" name="data_nascimento">
+>>>>>>> 55f4bf6b32ede8ff5a1e56b5ed26f88a8972999a
          </div>
          <div class="form-group">
          <label for="inputContacto">Contacto</label>
@@ -69,7 +82,7 @@
     <button type="clean" class="btn btn-lg btn-danger">Limpar</button>
     </div>
   </div>
-         
+      
          
        </form>
      </div>
