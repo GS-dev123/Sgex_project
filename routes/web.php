@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/professor','ProfessorController@index')->name('professor.index');
 Route::get('/professor/add','ProfessorController@create')->name('professor.create');
 Route::post('professor', 'ProfessorController@store')->name('professor.store');
-Route::get('/{id}','professorController@destroy')->name('professor.destroy');
+Route::get('professor/add/{id}','professorController@destroy')->name('professor.destroy');
 Route::get('/professor/{id}', 'ProfessorController@show')->name('professor.show');
 Route::get('edit_professor/{id}', 'professorController@edit')->name('professor.edit');
 Route::PATCH('/professor/{id}','ProfessorController@update')->name('professor.update');
