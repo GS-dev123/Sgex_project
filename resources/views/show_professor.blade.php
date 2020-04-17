@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professor</title>
+    <title>view_professor</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../css/home_style.css">
-    <link rel="stylesheet" href="../css/add_prof_style.css">
+    <link rel="stylesheet" href="../css/show_professor_style.css">
     <link type="text/css" rel="stylesheet" href="{{ mix('css/app.css') }}">
 </head>
 <body>
@@ -39,49 +39,37 @@
 <a href ="/professor" class="btn btn-lg">
     <i class="fas fa-arrow-circle-left fa-2x"  id="bt_back"></i>
   </a>
-<h2 class="desc">Edite o Professor</h6>
+
+
+<h2 class="desc">Ver Dados do Professor</h6>
 <!-- Formulario  -->
 
        <div class="container">
-       @foreach($professors as $professor)
-       @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-        <br /> 
-        @endif
-       <form method="post" action="{{ route('professor.update',$professor->id) }}">
-       @method('PATCH')
-       @csrf      
+       @foreach($professores as $professor)
+       <form>     
+         <div class="form-group">
+         <label for="inputNome">ID</label>
+           <input type="text" class="form-control" id="InputNome" name="id" value={{ $professor->id}} disabled>
+         </div>
          <div class="form-group">
              <label for="inputNome">Nome Completo</label>
-           <input type="text" class="form-control" id="InputNome" name="nome_completo" value={{ $professor->nome_completo}}>
+           <input type="text" class="form-control" id="InputNome" name="nome_completo" value={{ $professor->nome_completo}} disabled>
          </div>
          <div class="form-group">
          <label for="inputDataNascimento">Data Nascimento</label>
-           <input type="date" class="form-control" id="inputDataNascimento" name="data_nascimento" value={{ $professor->data_de_nascimento}}>
+           <input type="date" class="form-control" id="inputDataNascimento" name="data_nascimento" value={{ $professor->data_de_nascimento}} disabled>
          </div>
          <div class="form-group">
          <label for="inputContacto">Contacto</label>
-           <input type="text" class="form-control" id="inputContacto" name="contacto" value={{ $professor->contacto}}>
+           <input type="text" class="form-control" id="inputContacto" name="contacto" value={{ $professor->contacto}} disabled>
          </div>
          <div class="form-group">
          <label for="inputLocalizacao">Localização</label>
-           <input type="text" class="form-control" id="inputLocalizacao" name="localizacao" value={{ $professor->localizacao}}>
+           <input type="text" class="form-control" id="inputLocalizacao" name="localizacao" value={{ $professor->localizacao}} disabled>
          </div>
          <div class="form-row">
-    <div class="form-group col-md-6">
-    <button type="submit" class="btn btn-lg btn-primary">Actualizar</button>
-    </div>
-    <div class="form-group col-md-6">
-    <button type="clean" class="btn btn-lg btn-danger">Limpar</button>
-    </div>
-  </div>
-         
+    <button type="submit" class="btn btn-lg btn-primary"><i class="fas fa-print"></i>Imprimir</button>
+    </div> <br>  
         
        </form>
        @endforeach

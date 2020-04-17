@@ -61,8 +61,8 @@
             <td>{{$professor->data_de_nascimento}}</td>
             <td>{{$professor->contacto}}</td>
             <td>{{$professor->localizacao}}</td>
-            <td><a href="#" class="btn btn-sm btn-success"><i class="far fa-eye"></i></a>
-            <a href="{{ route('professor.edit',$professor->id)}}" class="btn btn-sm btn-warning"><i class="fas fa-pencil-alt"></i></a>
+            <td><a href="{{ route('professor.show',$professor->id) }}" class="btn btn-sm btn-success"><i class="far fa-eye"></i></a>
+            <a href="{{ route('professor.edit',$professor->id) }}" class="btn btn-sm btn-warning"><i class="fas fa-pencil-alt"></i></a>
             <a href="{{ route('professor.destroy',$professor->id) }}" class="btn btn-sm btn-danger"><i class="far fa-trash-alt"></i></a>
             </td>
           </tr>

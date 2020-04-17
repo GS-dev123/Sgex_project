@@ -44,8 +44,8 @@
 
 <div class="container">
        <form method="post" action="{{ route('curso.update') }}">
+       @method('PUT')
           @csrf
-          @method('PUT')
          <div class="form-group">
              <label for="inputNome">Nome</label>
            <input type="text" class="form-control" id="InputNome" name="nome" value="{{$curso->nome}}">

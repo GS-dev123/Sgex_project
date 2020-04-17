@@ -48,34 +48,40 @@ class ProfessorController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Professor $id)
-    {
-        return view('the_id', compact('id'));
+    {   $professores = Professor::find($id);
+        return view('/show_professor', compact('professores'));
     }
 
     
     public function edit(Professor $id)
     {
-        $id_lines = Professor_line::all();
-        return view('/add_professor', compact('id','id_line'));
+       $professors = Professor::find($id);
+        return view('/edit_professor', compact('professors','id'));
     }
 
     
     public function update(Request $request, $id)
     {
-
-        $professor->nome_completo = $request->nome_completo;
-        $professor->data_nascimento = $request->data_de_nascimento;
-        $professor->contacto = $request->contacto;
-        $professor->localizacao = $request->localizacao;
+        $request->validate([
+            'nome_completo' => 'required',
+            'data_nascimento' => 'required',
+            'contacto' => 'required',
+            'localizacao' => 'required'
+        ]);
+        $professor = Professor::find($id);
+        $professor->nome_completo =  $request->get('nome_completo');
+        $professor->data_de_nascimento = $request->get('data_nascimento');
+        $professor->contacto = $request->get('contacto');
+        $professor->localizacao = $request->get('localizacao');
         $professor->save();
         return redirect('/professor')->with('sucess', 'Dados actualizados com sucesso');
     }
 
     public function destroy($id)
     {
-        $professor = professor::find($id);
+       $professor = professor::find($id);
         $professor->delete();
-
         return redirect('/professor')->with('sucess', 'Dados do professor apagados com sucesso');
+        
     }
 }
