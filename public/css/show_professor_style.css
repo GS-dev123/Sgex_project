@@ -25,18 +25,17 @@ body{
 	border-radius: 8px;
 }
 .fa-print{
-    color: black;
-    size: ;
+    color: #fff;
 }
 .container{
-    box-shadow: 0 3px 5px 0 #E8E8E8, 0 2px 15px 0 #E8E8E8;
+    /*box-shadow: 0 3px 5px 0 #E8E8E8, 0 2px 15px 0 #E8E8E8;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 3%;
     width: 450px;
-    border-radius: 8px;
+    /*border-radius: 8px;*/
   
 
 }
@@ -56,4 +55,7 @@ body{
     text-align: center;
     color: rgb(85, 85, 85);
     font-weight: bold;
+}
+.label-group{
+    font-weight: 600;
 }

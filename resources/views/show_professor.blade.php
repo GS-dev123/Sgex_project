@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>view_professor</title>
+    <title>Professor</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -48,24 +48,20 @@
        @foreach($professores as $professor)
        <form>     
          <div class="form-group">
-         <label for="inputNome">ID</label>
-           <input type="text" class="form-control" id="InputNome" name="id" value={{ $professor->id}} disabled>
+             <label for="inputNome" class="label-group">Nome Completo:</label>
+           {{ $professor->nome_completo}}
          </div>
          <div class="form-group">
-             <label for="inputNome">Nome Completo</label>
-           <input type="text" class="form-control" id="InputNome" name="nome_completo" value={{ $professor->nome_completo}} disabled>
+         <label for="inputDataNascimento" class="label-group">Data Nascimento:</label>
+           {{ $professor->data_de_nascimento}}
          </div>
          <div class="form-group">
-         <label for="inputDataNascimento">Data Nascimento</label>
-           <input type="date" class="form-control" id="inputDataNascimento" name="data_nascimento" value={{ $professor->data_de_nascimento}} disabled>
+         <label for="inputContacto" class="label-group">Contacto:</label>
+           {{ $professor->contacto}}
          </div>
          <div class="form-group">
-         <label for="inputContacto">Contacto</label>
-           <input type="text" class="form-control" id="inputContacto" name="contacto" value={{ $professor->contacto}} disabled>
-         </div>
-         <div class="form-group">
-         <label for="inputLocalizacao">Localização</label>
-           <input type="text" class="form-control" id="inputLocalizacao" name="localizacao" value={{ $professor->localizacao}} disabled>
+         <label for="inputLocalizacao" class="label-group">Localização:</label>
+           {{ $professor->localizacao}}
          </div>
          <div class="form-row">
     <button type="submit" class="btn btn-lg btn-primary"><i class="fas fa-print"></i>Imprimir</button>
