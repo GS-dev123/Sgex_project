@@ -7,22 +7,14 @@ use App\professor;
 
 class ProfessorController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+   
     public function index()
     {
         $professors = professor::all();
         return view('professor', compact('professors'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function create()
     {
        return view('add_professor'); 
@@ -41,12 +33,7 @@ class ProfessorController extends Controller
         return redirect('/professor')->with('message', 'Professor registado com sucesso');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function show(Professor $id)
     {   $professores = Professor::find($id);
         return view('/show_professor', compact('professores'));

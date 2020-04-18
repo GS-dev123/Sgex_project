@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professor</title>
+    <title>Curso</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -41,27 +41,27 @@
   </a>
 
 
-<h2 class="desc">Dados do Professor</h6>
+<h2 class="desc">Dados do Curso</h6>
 <!-- Formulario  -->
 
        <div class="container">
-       @foreach($professores as $professor)
+       @foreach($cursos as $curso)
        <form>     
          <div class="form-group">
-             <label for="inputNome" class="label-group">Nome Completo:</label>
-           {{ $professor->nome_completo}}
+             <label for="inputNome" class="label-group">Nome:</label>
+           {{ $curso->nome}}
          </div>
          <div class="form-group">
          <label for="inputDataNascimento" class="label-group">Data Nascimento:</label>
-           {{ $professor->data_de_nascimento}}
+           {{ $curso->data_de_nascimento}}
          </div>
          <div class="form-group">
          <label for="inputContacto" class="label-group">Contacto:</label>
-           {{ $professor->contacto}}
+           {{ $curso->contacto}}
          </div>
          <div class="form-group">
          <label for="inputLocalizacao" class="label-group">Localização:</label>
-           {{ $professor->localizacao}}
+           {{ $curso->localizacao}}
          </div>
          <div class="form-row">
     <a class="btn btn-lg btn-primary" onClick="window.print()"><i class="fas fa-print"></i>Imprimir</a>

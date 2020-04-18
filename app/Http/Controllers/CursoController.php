@@ -62,32 +62,34 @@ class CursoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Curso $id)
     {
-        //
+        $cursos = Curso::find($id);
+        return view('/show_curso', compact('cursos'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+    public function edit(Curso $id)
     {
-       
+        $cursos = Curso::find($id);
+        return view('/edit_curso', compact('cursos','id'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, $id)
     {
-       
+        $request->validate([
+            'nome'=>'required',
+            'duracao'=>'required',
+            'numero_de_disciplinas'=>'required',
+            'preco'=>'required'
+        ]);
+        $curso = Curso::find($id);
+        $curso->nome =  $request->get('nome');
+        $curso->duracao = $request->get('duracao');
+        $curso->numero_de_disciplinas = $request->get('numero_de_disciplinas');
+        $curso->preco = $request->get('preco');
+        $curso->save();
+        return redirect('/curso')->with('sucess', 'Dados actualizados com sucesso');
     }
 
     /**

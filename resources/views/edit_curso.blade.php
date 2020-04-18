@@ -43,28 +43,28 @@
 <h2 class="desc">Edite o Curso</h6>
 
 <div class="container">
-       <form method="post" action="{{ route('curso.update') }}">
-       @method('PUT')
-          @csrf
+       <form method="post" action="{{ route('curso.update',$cursos->id) }}">
+       @method('PATCH')
+       @csrf  
          <div class="form-group">
              <label for="inputNome">Nome</label>
-           <input type="text" class="form-control" id="InputNome" name="nome" value="{{$curso->nome}}">
+           <input type="text" class="form-control" id="InputNome" name="nome" value={{ $cursos->nome}}>
          </div>
          <div class="form-group">
          <label for="inputDataNascimento">Duração</label>
-           <input type="text" class="form-control" id="inputDataNascimento" name="duracao" value="{{$curso->duracao}}">
+           <input type="text" class="form-control" id="inputDataNascimento" name="duracao" value={{ $cursos->duracao}}>
          </div>
          <div class="form-group">
          <label for="inputNrDisc">Número de Disciplinas</label>
-           <input type="text" class="form-control" id="inputNrDisc" name="numero_de_disciplinas" value="{{$curso->numero_de_disciplinas}}">
+           <input type="text" class="form-control" id="inputNrDisc" name="numero_de_disciplinas" value={{ $cursos->numero_de_disciplinas}}>
          </div>
          <div class="form-group">
          <label for="inputPreco">Preço</label>
-           <input type="text" class="form-control" id="inputPreco" name="preco" value="{{$curso->preco}}">
+           <input type="text" class="form-control" id="inputPreco" name="preco" value={{ $cursos->preco}}>
          </div>
          <div class="form-row">
     <div class="form-group col-md-6">
-    <button type="submit" class="btn btn-lg btn-primary">Gravar</button>
+    <button type="submit" class="btn btn-lg btn-primary">Actualizar</button>
     </div>
     <div class="form-group col-md-6">
     <button type="clean" class="btn btn-lg btn-danger">Limpar</button>

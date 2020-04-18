@@ -61,9 +61,8 @@
             <td>{{$curso->duracao}}</td>
             <td>{{$curso->numero_de_disciplinas}}</td>
             <td>{{$curso->preco}}</td>
-            <td><a href="#" class="btn btn-sm btn-success"><i class="far fa-eye"></i></a>
-            <a href="#" class="btn btn-sm btn-warning"><i class="fas fa-pencil-alt"></i></a>
-            @method('DELETE')
+            <td><a href="{{ route('curso.show',$curso->id) }}" class="btn btn-sm btn-success"><i class="far fa-eye"></i></a>
+            <a href="{{ route('curso.edit',$curso->id) }}" class="btn btn-sm btn-warning"><i class="fas fa-pencil-alt"></i></a>
             <a href="{{ route('curso.destroy', $curso->id)}}" class="btn btn-sm btn-danger"><i class="far fa-trash-alt"></i></a></td>
         </tr>
     @endforeach

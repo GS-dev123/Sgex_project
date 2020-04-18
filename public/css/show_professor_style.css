@@ -22,7 +22,8 @@ body{
     margin-right: auto;
     margin-left:auto ;
     padding: 1px 0px 6px 2px;
-	border-radius: 8px;
+    border-radius: 8px;
+    color: #fff;
 }
 .fa-print{
     color: #fff;
@@ -55,7 +56,14 @@ body{
     text-align: center;
     color: rgb(85, 85, 85);
     font-weight: bold;
+    margin-left: -63px;
 }
 .label-group{
     font-weight: 600;
+}
+a:not([href]){
+    color: #fff;
+}
+a:not([href]):hover{
+    color:#fff;
 }
