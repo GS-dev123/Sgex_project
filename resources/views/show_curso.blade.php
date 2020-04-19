@@ -36,7 +36,7 @@
     </ul>
   </div>
 </nav>
-<a href ="/professor" class="btn btn-lg">
+<a href ="/curso" class="btn btn-lg">
     <i class="fas fa-arrow-circle-left fa-2x"  id="bt_back"></i>
   </a>
 
@@ -45,23 +45,23 @@
 <!-- Formulario  -->
 
        <div class="container">
-       @foreach($cursos as $curso)
+       @foreach($cursos as $curs)
        <form>     
          <div class="form-group">
              <label for="inputNome" class="label-group">Nome:</label>
-           {{ $curso->nome}}
+           {{ $curs->nome}}
          </div>
          <div class="form-group">
-         <label for="inputDataNascimento" class="label-group">Data Nascimento:</label>
-           {{ $curso->data_de_nascimento}}
+         <label for="inputDataNascimento" class="label-group">Duração:</label>
+           {{ $curs->duracao}}
          </div>
          <div class="form-group">
-         <label for="inputContacto" class="label-group">Contacto:</label>
-           {{ $curso->contacto}}
+         <label for="inputContacto" class="label-group">Número de Disciplinas:</label>
+           {{ $curs->numero_de_disciplinas}}
          </div>
          <div class="form-group">
-         <label for="inputLocalizacao" class="label-group">Localização:</label>
-           {{ $curso->localizacao}}
+         <label for="inputLocalizacao" class="label-group">Preço:</label>
+           {{ $curs->preco}}
          </div>
          <div class="form-row">
     <a class="btn btn-lg btn-primary" onClick="window.print()"><i class="fas fa-print"></i>Imprimir</a>

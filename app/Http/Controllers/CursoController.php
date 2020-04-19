@@ -14,9 +14,9 @@ class CursoController extends Controller
      */
     public function index()
     {
-        $cursos = Curso::all();
+        $curso = Curso::all();
 
-        return view('curso', compact('cursos'));
+        return view('curso', compact('curso'));
     }
 
     /**
@@ -102,7 +102,6 @@ class CursoController extends Controller
     {
         $curso = curso::find($id);
         $curso->delete();
-
         return redirect('/curso')->with('message', 'curso deletado com sucesso!');
     }
 }

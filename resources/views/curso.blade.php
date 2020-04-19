@@ -54,16 +54,16 @@
     </tr>
   </thead>
   <tbody>
-    @foreach($cursos as $curso)
+    @foreach($curso as $curs)
         <tr>
-            <td>{{$curso->id}}</td>
-            <td>{{$curso->nome}}</td>
-            <td>{{$curso->duracao}}</td>
-            <td>{{$curso->numero_de_disciplinas}}</td>
-            <td>{{$curso->preco}}</td>
-            <td><a href="{{ route('curso.show',$curso->id) }}" class="btn btn-sm btn-success"><i class="far fa-eye"></i></a>
-            <a href="{{ route('curso.edit',$curso->id) }}" class="btn btn-sm btn-warning"><i class="fas fa-pencil-alt"></i></a>
-            <a href="{{ route('curso.destroy', $curso->id)}}" class="btn btn-sm btn-danger"><i class="far fa-trash-alt"></i></a></td>
+            <td>{{$curs->id}}</td>
+            <td>{{$curs->nome}}</td>
+            <td>{{$curs->duracao}}</td>
+            <td>{{$curs->numero_de_disciplinas}}</td>
+            <td>{{$curs->preco}}</td>
+            <td><a href="{{ route('curso.show',$curs->id) }}" class="btn btn-sm btn-success"><i class="far fa-eye"></i></a>
+            <a href="{{ route('curso.edit',$curs->id) }}" class="btn btn-sm btn-warning"><i class="fas fa-pencil-alt"></i></a>
+            <a href="{{ route('curso.destroy', $curs->id)}}" class="btn btn-sm btn-danger"><i class="far fa-trash-alt"></i></a></td>
         </tr>
     @endforeach
   </tbody>
