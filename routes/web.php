@@ -17,11 +17,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/professor','ProfessorController@index')->name('professor.index');
 Route::get('/professor/add','ProfessorController@create')->name('professor.create');
-Route::post('professor', 'ProfessorController@store')->name('professor.store');
-Route::get('professor/add/{id}','professorController@destroy')->name('professor.destroy');
-Route::get('/professor/{id}', 'ProfessorController@show')->name('professor.show');
-Route::get('edit_professor/{id}', 'professorController@edit')->name('professor.edit');
-Route::PATCH('/professor/{id}','ProfessorController@update')->name('professor.update');
+Route::post('professor/add', 'ProfessorController@store')->name('professor.store');
+Route::get('professor/{id}/delete','professorController@destroy')->name('professor.destroy');
+Route::get('/professor/{id}/show', 'ProfessorController@show')->name('professor.show');
+Route::get('/professor/{id}/edit', 'professorController@edit')->name('professor.edit');
+Route::PATCH('/professor/{id}/edit','ProfessorController@update')->name('professor.update');
 
 
 
@@ -33,9 +33,9 @@ Route::get('/curso','CursoController@index')->name('curso.index');
 Route::get('/curso/add','CursoController@create')->name('curso.create');
 Route::post('/curso/add', 'CursoController@store')->name('curso.store');
 Route::get('/curso/delete/{id}','CursoController@destroy')->name('curso.destroy');
-Route::get('/curso/show/{id}', 'CursoController@show')->name('curso.show');
-Route::get('edit_curso/{id}', 'CursoController@edit')->name('curso.edit');
-Route::PATCH('/curso/{id}','CursoController@update')->name('curso.update');
+Route::get('/curso/{id}/show', 'CursoController@show')->name('curso.show');
+Route::get('/curso/{id}/edit', 'CursoController@edit')->name('curso.edit');
+Route::PATCH('/curso/{id}/edit','CursoController@update')->name('curso.update');
 
 
 
