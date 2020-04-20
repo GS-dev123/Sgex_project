@@ -64,7 +64,7 @@
             <td>{{$estudant->localizacao}}</td>
             <td><a href="#" class="btn btn-sm btn-success"><i class="far fa-eye"></i></a>
             <a href="#" class="btn btn-sm btn-warning"><i class="fas fa-pencil-alt"></i></a>
-            <a href="#" class="btn btn-sm btn-danger"><i class="far fa-trash-alt"></i></a>
+            <a href="{{ route('estudante.destroy',$estudant->id)}}" class="btn btn-sm btn-danger"><i class="far fa-trash-alt"></i></a>
             </td>
           </tr>
       @endforeach

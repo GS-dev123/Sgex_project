@@ -58,8 +58,10 @@ class EstudanteController extends Controller
         //
     }
 
-    public function destroy(estudante $estudante)
+    public function destroy($id)
     {
-        //
+        $estudante = Estudante::find($id);
+        $estudante->delete();
+        return redirect('/estudante')->with('message', 'Estudante deletado com sucesso!');
     }
 }
