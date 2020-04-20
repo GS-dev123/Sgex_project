@@ -25,9 +25,7 @@ Route::PATCH('/professor/{id}/edit','ProfessorController@update')->name('profess
 
 
 
-Route::get('/estudante', function () { return view('estudante'); });
 
-Route::get('/curso', function () { return view('curso'); });
 
 Route::get('/curso','CursoController@index')->name('curso.index');
 Route::get('/curso/add','CursoController@create')->name('curso.create');
@@ -40,9 +38,15 @@ Route::PATCH('/curso/{id}/edit','CursoController@update')->name('curso.update');
 
 
 
+Route::get('/estudante','EstudanteController@index')->name('curso.index');
+Route::get('/estudante/add','EstudanteController@create')->name('estudante.create');
+Route::post('/estudante/add','EstudanteController@store')->name('estudante.store');
+/*Route::get('/estudante/{id}/edit','EstudanteController@edit')-name('estudante.edit');*/
+Route::PATCH('/estudante/{id}/edit','EstudanteController@update')->name('estudante.update');
 
-Route::get('/estudante/add', function () { return view('add_estudante'); });
-Route::get('/estudante/edit', function () {  return view('edit_estudante'); });
+
+
+
 Route::get('/', function () { return view('login'); });
 Route::get('/home', function () { return view('telaPrincipal'); });
 

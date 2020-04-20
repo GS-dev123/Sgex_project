@@ -8,8 +8,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../css/home_style.css">
-    <link rel="stylesheet" href="../css/add_estud_style.css">
+    <link rel="stylesheet" href="{{asset('css/home_style.css')}}">
+    <link rel="stylesheet" href="{{asset('css/add_estud_style.css')}}">
     <link type="text/css" rel="stylesheet" href="{{ mix('css/app.css') }}">
 </head>
 <body>
@@ -42,36 +42,32 @@
     <a href ="/estudante" class="btn btn-lg"><i class="fas fa-arrow-circle-left fa-2x"  id="bt_back"></i></a>
 
 
-  <h2 class="desc">Edit o Estudante</h6>
+  <h2 class="desc">Edite o Estudante</h6>
 
 <div class="container">
-
-       <form>
+        @foreach($estudantes as $estudante)
+       <form method="post" action="{{ route('estudante.update',$estudant->id) }}">
+       @method('PATCH')
+       @csrf
          <div class="form-group">
              <label for="inputNome">Nome Completo</label>
-           <input type="text" class="form-control" id="InputNome">
+           <input type="text" class="form-control" id="InputNome" value={{ $estudante->nome_completo}}>
          </div>
          <div class="form-group">
          <label for="inputDataNascimento">Data Nascimento</label>
-           <input type="date" class="form-control" id="inputDataNascimento">
+           <input type="date" class="form-control" id="inputDataNascimento" value={{ $estudante->data_de_nascimento>
          </div>
          <div class="form-group">
          <label for="inputContacto">Contacto</label>
-           <input type="text" class="form-control" id="inputContacto">
+           <input type="text" class="form-control" id="inputContacto" value={{ $estudante->contacto}}>
          </div>
          <div class="form-group">
          <label for="inputCurso">Curso</label><br>
-         <select class="form-control" id="exampleFormControlSelect1">
-      <option>Selecione curso</option>    
-      <option>Informatica</option>
-      <option>Biologia</option>
-      <option>Matematica</option>
-      <option>.....</option>
-    </select>
+         <input type="text" class="form-control" id="inputContacto" value={{ $estudante->curso_id}}>
          </div>
          <div class="form-group">
          <label for="inputLocalizacao">Localização</label>
-           <input type="text" class="form-control" id="inputLocalizacao">
+           <input type="text" class="form-control" id="inputLocalizacao" value={{ $estudante->localizacao}}>
          </div>
          <div class="form-row">
     <div class="form-group col-md-6">
@@ -84,6 +80,7 @@
          
          
        </form>
+       @endforeach
      </div>
 
 

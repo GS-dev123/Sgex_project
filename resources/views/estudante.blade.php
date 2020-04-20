@@ -54,15 +54,20 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Germildo</td>
-      <td>05/12/1994</td>
-      <td>824024486</td>
-      <td>Informatica</td>
-      <td>Zimpeto</td>
-      <td><a href="#" class="btn btn-sm btn-success"><i class="far fa-eye"></i></a><a href="/estudante/edit" class="btn btn-sm btn-warning"><i class="fas fa-pencil-alt"></i></a><a href="#" class="btn btn-sm btn-danger"><i class="far fa-trash-alt"></i></a></td>
-    </tr>
+    @foreach($estudante as $estudant)
+        <tr>
+            <td>{{$estudant->id}}</td>
+            <td>{{$estudant->nome_completo}}</td>
+            <td>{{$estudant->data_de_nascimento}}</td>
+            <td>{{$estudant->contacto}}</td>
+            <td>{{{$estudant->curso->nome}}}</td>
+            <td>{{$estudant->localizacao}}</td>
+            <td><a href="#" class="btn btn-sm btn-success"><i class="far fa-eye"></i></a>
+            <a href="#" class="btn btn-sm btn-warning"><i class="fas fa-pencil-alt"></i></a>
+            <a href="#" class="btn btn-sm btn-danger"><i class="far fa-trash-alt"></i></a>
+            </td>
+          </tr>
+      @endforeach
   </tbody>
 </table>
 

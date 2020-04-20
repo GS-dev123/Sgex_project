@@ -12,4 +12,11 @@ class curso extends Model
         'numero_de_disciplinas',
         'preco'
     ];
+
+
+
+    public function estudantes()
+    {
+        return $this->hasMany('App\estudante', 'curso_id', 'id');
+    }
 }

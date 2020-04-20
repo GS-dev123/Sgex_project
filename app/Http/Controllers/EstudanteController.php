@@ -7,77 +7,57 @@ use Illuminate\Http\Request;
 
 class EstudanteController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function index()
     {
-        //
+        $estudante = Estudante::with('curso')->get();
+        return view('estudante', compact('estudante'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function create()
     {
-        //
+        return view('add_estudante');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nome_completo'=>'required',
+            'data_de_nascimento'=>'required',
+            'contacto'=>'required',
+            'curso_id'=>'required',
+            'localizacao'=>'required'
+        ]);
+
+        $estudante = new Estudante([
+            'nome_completo' => $request->get('nome_completo'),
+            'data_de_nascimento' => $request->get('data_de_nascimento'),
+            'contacto' => $request->get('contacto'),
+            'curso_id' => $request->get('curso_id'),
+            'localizacao' => $request->get('localizacao')
+           
+        ]);
+        $estudante->save();
+        return redirect('/estudante')->with('message', 'Estudante registado com sucesso!');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\estudante  $estudante
-     * @return \Illuminate\Http\Response
-     */
     public function show(estudante $estudante)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\estudante  $estudante
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(estudante $estudante)
+    public function edit(Estudante $id)
     {
-        //
+        $estudantes = Curso::find($id);
+        return view('/edit_estudante', compact('estudantes','id'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\estudante  $estudante
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, estudante $estudante)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\estudante  $estudante
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(estudante $estudante)
     {
         //
