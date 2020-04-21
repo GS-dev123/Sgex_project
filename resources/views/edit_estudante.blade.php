@@ -71,7 +71,7 @@
          </div>
          <div class="form-row">
     <div class="form-group col-md-6">
-    <button type="submit" class="btn btn-lg btn-primary">Gravar</button>
+    <button type="submit" class="btn btn-lg btn-primary">Actualizar</button>
     </div>
     <div class="form-group col-md-6">
     <button type="clean" class="btn btn-lg btn-danger">Limpar</button>

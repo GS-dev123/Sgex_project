@@ -52,7 +52,7 @@
            {{ $professor->nome_completo}}
          </div>
          <div class="form-group">
-         <label for="inputDataNascimento" class="label-group">Data Nascimento:</label>
+         <label for="inputDataNascimento" class="label-group">Data de Nascimento:</label>
            {{ $professor->data_de_nascimento}}
          </div>
          <div class="form-group">

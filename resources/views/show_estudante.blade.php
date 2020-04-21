@@ -8,9 +8,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../css/home_style.css">
-    <link rel="stylesheet" href="../css/professor_style.css">
-    <link rel="stylesheet" href="../css/table_style.css">
+    <link rel="stylesheet" href="{{asset('css/home_style.css')}}">
+    <link rel="stylesheet" href="{{asset('css/show_professor_style.css')}}">
     <link type="text/css" rel="stylesheet" href="{{ mix('css/app.css') }}">
 </head>
 <body>
@@ -29,7 +28,7 @@
         <a class="nav-link" href="/estudante" id="links">Estudante</a>
       </li>
       <li class="nav-item">
-      <a class="nav-link" href="/curso" id="links">Curso</a>
+      <a class="nav-link" href="/curso " id="links">Curso</a>
       </li>
       <li class="nav-item">
       <a class="nav-link" href="/professor" id="links">Professor</a>
@@ -37,39 +36,48 @@
     </ul>
   </div>
 </nav>
+<a href ="/estudante" class="btn btn-lg">
+    <i class="fas fa-arrow-circle-left fa-2x"  id="bt_back"></i>
+  </a>
+
+
+<h2 class="descp">Dados do Estudante</h6>
 <!-- Formulario  -->
 
+       <div class="container">
+       @foreach($estudantes as $estudante)
+       <form>     
+         <div class="form-group">
+             <label for="inputNome" class="label-group">Nome Completo:</label>
+           {{ $estudante->nome_completo}}
+         </div>
+         <div class="form-group">
+         <label for="inputDataNascimento" class="label-group">Data de Nascimento:</label>
+           {{ $estudante->data_de_nascimento}}
+         </div>
+         <div class="form-group">
+         <label for="inputContacto" class="label-group">Contacto:</label>
+           {{ $estudante->contacto}}
+         </div>
+         <div class="form-group">
+         <label for="inputContacto" class="label-group">Curso:</label>
+           {{{ $estudante->curso->nome}}}
+         </div>
+         <div class="form-group">
+         <label for="inputLocalizacao" class="label-group">Localização:</label>
+           {{ $estudante->localizacao}}
+         </div>
+         <div class="form-row">
+    <a class="btn btn-lg btn-primary" onClick="window.print()"><i class="fas fa-print"></i>Imprimir</a>
+    </div> <br>  
+        
+       </form>
+       @endforeach
+     </div>
 
-        <a href ="/estudante/add" class="btn btn-lg btn-primary">Crie Novo Estudante</a>
-        <table class="table table-striped">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Nome Completo</th>
-      <th scope="col">Data de Nascimento</th>
-      <th scope="col">Contacto</th>
-      <th scope="col">Curso</th>
-      <th scope="col">Localização</th>
-      <th scope="col">Acção</th>
-    </tr>
-  </thead>
-  <tbody>
-    @foreach($estudante as $estudant)
-        <tr>
-            <td>{{$estudant->id}}</td>
-            <td>{{$estudant->nome_completo}}</td>
-            <td>{{$estudant->data_de_nascimento}}</td>
-            <td>{{$estudant->contacto}}</td>
-            <td>{{{$estudant->curso->nome}}}</td>
-            <td>{{$estudant->localizacao}}</td>
-            <td><a href="{{ route('estudante.show',$estudant->id)}}" class="btn btn-sm btn-success"><i class="far fa-eye"></i></a>
-            <a href="#" class="btn btn-sm btn-warning"><i class="fas fa-pencil-alt"></i></a>
-            <a href="{{ route('estudante.destroy',$estudant->id)}}" class="btn btn-sm btn-danger"><i class="far fa-trash-alt"></i></a>
-            </td>
-          </tr>
-      @endforeach
-  </tbody>
-</table>
+
+
+ 
 
 
 
