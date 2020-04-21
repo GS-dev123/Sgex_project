@@ -42,7 +42,7 @@ Route::get('/estudante','EstudanteController@index')->name('curso.index');
 Route::get('/estudante/add','EstudanteController@create')->name('estudante.create');
 Route::post('/estudante/add','EstudanteController@store')->name('estudante.store');
 Route::get('/estudante/{id}/show', 'EstudanteController@show')->name('estudante.show');
-/*Route::get('/estudante/{id}/edit','EstudanteController@edit')-name('estudante.edit');*/
+Route::get('/estudante/{id}/edit','EstudanteController@edit')->name('estudante.edit');
 Route::PATCH('/estudante/{id}/edit','EstudanteController@update')->name('estudante.update');
 Route::get('/estudante/{id}/delete','EstudanteController@destroy')->name('estudante.destroy');
 

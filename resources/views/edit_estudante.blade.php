@@ -46,40 +46,40 @@
 
 <div class="container">
         @foreach($estudantes as $estudante)
-       <form method="post" action="{{ route('estudante.update',$estudant->id) }}">
-       @method('PATCH')
-       @csrf
-         <div class="form-group">
-             <label for="inputNome">Nome Completo</label>
-           <input type="text" class="form-control" id="InputNome" value={{ $estudante->nome_completo}}>
-         </div>
-         <div class="form-group">
-         <label for="inputDataNascimento">Data Nascimento</label>
-           <input type="date" class="form-control" id="inputDataNascimento" value={{ $estudante->data_de_nascimento>
-         </div>
-         <div class="form-group">
-         <label for="inputContacto">Contacto</label>
-           <input type="text" class="form-control" id="inputContacto" value={{ $estudante->contacto}}>
-         </div>
-         <div class="form-group">
-         <label for="inputCurso">Curso</label><br>
-         <input type="text" class="form-control" id="inputContacto" value={{ $estudante->curso_id}}>
-         </div>
-         <div class="form-group">
-         <label for="inputLocalizacao">Localização</label>
-           <input type="text" class="form-control" id="inputLocalizacao" value={{ $estudante->localizacao}}>
-         </div>
-         <div class="form-row">
-    <div class="form-group col-md-6">
-    <button type="submit" class="btn btn-lg btn-primary">Actualizar</button>
-    </div>
-    <div class="form-group col-md-6">
-    <button type="clean" class="btn btn-lg btn-danger">Limpar</button>
-    </div>
-  </div>
-         
-         
-       </form>
+                  <form method="post" action="{{ route('estudante.update',$estudante->id) }}">
+                  @method('PATCH')
+                  @csrf
+                    <div class="form-group">
+                        <label for="inputNome">Nome Completo</label>
+                      <input type="text" class="form-control" id="InputNome" value={{ $estudante->nome_completo}}>
+                    </div>
+                    <div class="form-group">
+                    <label for="inputDataNascimento">Data Nascimento</label>
+                      <input type="date" class="form-control" id="inputDataNascimento" value={{ $estudante->data_de_nascimento}}>
+                    </div>
+                    <div class="form-group">
+                    <label for="inputContacto">Contacto</label>
+                      <input type="text" class="form-control" id="inputContacto" value={{ $estudante->contacto}}>
+                    </div>
+                    <div class="form-group">
+                    <label for="inputCurso">Curso</label><br>
+                    <input type="text" class="form-control" id="inputContacto" value={{{ $estudante->curso->nome}}}>
+                    </div>
+                    <div class="form-group">
+                    <label for="inputLocalizacao">Localização</label>
+                      <input type="text" class="form-control" id="inputLocalizacao" value={{ $estudante->localizacao}}>
+                    </div>
+                    <div class="form-row">
+                <div class="form-group col-md-6">
+                <button type="submit" class="btn btn-lg btn-primary">Actualizar</button>
+                </div>
+                <div class="form-group col-md-6">
+                <button type="clean" class="btn btn-lg btn-danger">Limpar</button>
+                </div>
+              </div>
+                    
+                    
+                  </form>
        @endforeach
      </div>
 
