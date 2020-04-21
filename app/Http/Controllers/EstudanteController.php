@@ -67,7 +67,7 @@ class EstudanteController extends Controller
         $estudante->nome_completo =  $request->get('nome_completo');
         $estudante->data_de_nascimento = $request->get('data_de_nascimento');
         $estudante->contacto = $request->get('contacto');
-        $estudante->cursos()->sync(array_pluck($request->input('selectedTags'), 'id'));
+        $estudante->curso->nome= $request->get('nome');
         $estudante->localizacao = $request->get('localizacao');
         $estudante->save();
         return redirect('/estudante')->with('sucess', 'Dados actualizados com sucesso');

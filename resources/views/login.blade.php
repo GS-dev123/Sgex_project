@@ -13,7 +13,7 @@
 <body>
     <div class="container">
        
-        <form>
+        <form method="POST" action="{{ route('login') }}">
             <img class="logo" src="../img/sgex_logo.png" alt="Sgex">
           <div class="form-group">
             <input type="text" class="form-control" id="username" placeholder="Username" name="email">

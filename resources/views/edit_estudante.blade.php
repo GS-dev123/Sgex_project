@@ -45,7 +45,7 @@
   <h2 class="desc">Edite o Estudante</h6>
 
 <div class="container">
-        @foreach($estudantes as $estudante)
+ @foreach($estudantes as $estudante)
                   <form method="post" action="{{ route('estudante.update',$estudante->id) }}">
                   @method('PATCH')
                   @csrf
@@ -63,7 +63,7 @@
                     </div>
                     <div class="form-group">
                     <label for="inputCurso">Curso</label><br>
-                    <input type="text" class="form-control" id="inputContacto" value={{{ $estudante->curso->nome}}}>
+                    <input type="text" class="form-control" id="inputContacto" value={{ $estudante->curso->nome}}>
                     </div>
                     <div class="form-group">
                     <label for="inputLocalizacao">Localização</label>
@@ -76,9 +76,7 @@
                 <div class="form-group col-md-6">
                 <button type="clean" class="btn btn-lg btn-danger">Limpar</button>
                 </div>
-              </div>
-                    
-                    
+              </div>  
                   </form>
        @endforeach
      </div>

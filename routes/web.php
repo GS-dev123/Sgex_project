@@ -2,16 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+
 
 
 
@@ -38,7 +29,7 @@ Route::PATCH('/curso/{id}/edit','CursoController@update')->name('curso.update');
 
 
 
-Route::get('/estudante','EstudanteController@index')->name('curso.index');
+Route::get('/estudante','EstudanteController@index')->name('estudante.index');
 Route::get('/estudante/add','EstudanteController@create')->name('estudante.create');
 Route::post('/estudante/add','EstudanteController@store')->name('estudante.store');
 Route::get('/estudante/{id}/show', 'EstudanteController@show')->name('estudante.show');
@@ -50,6 +41,10 @@ Route::get('/estudante/{id}/delete','EstudanteController@destroy')->name('estuda
 
 
 Route::get('/', function () { return view('login'); });
-Route::get('/home', function () { return view('telaPrincipal'); });
+/*Route::get('/home', function () { return view('telaPrincipal'); });*/
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

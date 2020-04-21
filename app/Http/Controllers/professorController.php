@@ -61,7 +61,7 @@ class ProfessorController extends Controller
         $professor->contacto = $request->get('contacto');
         $professor->localizacao = $request->get('localizacao');
         $professor->save();
-        return redirect('/professor')->with('sucess', 'Dados actualizados com sucesso');
+        return redirect('/professor')->with('success', 'Dados actualizados com sucesso');
     }
 
     public function destroy($id)
