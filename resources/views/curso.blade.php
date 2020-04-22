@@ -39,9 +39,9 @@
 </nav>
 <!-- Formulario  -->
 
-
+@include('Includes.alerts')
            <a href ="/curso/add" class="btn btn-lg btn-primary">Crie Novo Curso</a>
-         
+        
            <table class="table table-striped">
   <thead>
     <tr>

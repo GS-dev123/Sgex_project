@@ -42,7 +42,7 @@
   </a>
 <!-- Formulario  -->
 <h2 class="desc">Crie Novo Curso</h6>
-
+@include('Includes.alerts')
 <div class="container">
        <form method="post" action="{{ route('curso.store') }}">
          @csrf
