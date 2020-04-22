@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/professor','ProfessorController@index')->name('professor.index');
 Route::get('/professor/add','ProfessorController@create')->name('professor.create');
 Route::post('professor/add', 'ProfessorController@store')->name('professor.store');
-Route::get('professor/{id}/delete','professorController@destroy')->name('professor.destroy');
+Route::get('professor/{id}','professorController@destroy')->name('professor.destroy');
 Route::get('/professor/{id}/show', 'ProfessorController@show')->name('professor.show');
 Route::get('/professor/{id}/edit', 'professorController@edit')->name('professor.edit');
 Route::PATCH('/professor/{id}/edit','ProfessorController@update')->name('professor.update');
@@ -38,13 +38,9 @@ Route::PATCH('/estudante/{id}/edit','EstudanteController@update')->name('estudan
 Route::get('/estudante/{id}/delete','EstudanteController@destroy')->name('estudante.destroy');
 
 
+//Route::get('/home', function () { return view('telaPrincipal'); });
 
-
-Route::get('/', function () { return view('login'); });
-/*Route::get('/home', function () { return view('telaPrincipal'); });*/
-
-
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/', function () { return view('login'); });
+//Route::get('/home', function () { return view('telaPrincipal'); });
+//Auth::routes();
+//Route::get('/home', 'HomeController@index')->name('home');

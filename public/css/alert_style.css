@@ -1,0 +1,9 @@
+.close{
+    font-size: 20px;
+    
+}
+.alert-primary{
+    height: 50px;
+    color: red;
+    display: block;
+}

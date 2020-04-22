@@ -14,6 +14,7 @@
     <link type="text/css" rel="stylesheet" href="{{ mix('css/app.css') }}">
 </head>
 <body>
+  
     <!-- NavBar-Menu-->
 <nav class="navbar navbar-expand-lg navbar-dark" id="menus">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,8 +40,9 @@
 </nav>
 <!-- Formulario  -->
 
-
+@include('Includes.alerts')
 <a href ="/professor/add" class="btn btn-lg btn-primary">Crie Novo Professor</a>
+
 
 <table class="table table-striped">
   <thead>

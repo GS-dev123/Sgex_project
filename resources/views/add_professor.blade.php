@@ -41,29 +41,30 @@
   </a>
 <h2 class="desc">Crie Novo Professor</h6>
 <!-- Formulario  -->
-
+@include('Includes.alerts')
 <div class="container">
+
        <form method="post" action="{{ route('professor.store') }}">
        @csrf
          <div class="form-group">
              <label for="inputNome">Nome Completo</label>
-           <input type="text" class="form-control" id="InputNome" name="nome_completo">
+           <input type="text" class="form-control" id="InputNome" name="nome_completo" value="{{old('nome_completo')}}">
          </div>
          <div class="form-group">
          <label for="inputDataNascimento">Data Nascimento</label>
-           <input type="date" class="form-control" id="inputDataNascimento" name="data_de_nascimento">
+           <input type="date" class="form-control" id="inputDataNascimento" name="data_de_nascimento" value="{{old('data_de_nascimento')}}">
          </div>
          <div class="form-group">
          <label for="inputContacto">Contacto</label>
-           <input type="text" class="form-control" id="inputContacto" name="contacto">
+           <input type="text" class="form-control" id="inputContacto" name="contacto" value="{{old('contacto')}}">
          </div>
          <div class="form-group">
          <label for="inputLocalizacao">Localização</label>
-           <input type="text" class="form-control" id="inputLocalizacao" name="localizacao">
+           <input type="text" class="form-control" id="inputLocalizacao" name="localizacao" value="{{old('localizacao')}}">
          </div>
          <div class="form-row">
     <div class="form-group col-md-6">
-    <button type="submit" class="btn btn-lg btn-primary">Gravar</button>
+    <button type="submit" class="btn btn-lg btn-primary" >Gravar</button>
     </div>
     <div class="form-group col-md-6">
     <button type="clean" class="btn btn-lg btn-danger">Limpar</button>
@@ -73,6 +74,7 @@
          
        </form>
      </div>
+
 
 
 

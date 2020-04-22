@@ -41,19 +41,9 @@
   </a>
 <h2 class="desc">Edite o Professor</h6>
 <!-- Formulario  -->
-
-       <div class="container">
-       @foreach($professors as $professor)
-       @if ($errors->any())
-        <div class="alert alert-success">
-            <ul>
-                @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-        <br /> 
-        @endif
+@include('Includes.alerts')
+<div class="container">
+@foreach($professors as $professor)
        <form method="post" action="{{ route('professor.update',$professor->id) }}">
        @method('PATCH')
        @csrf      

@@ -22,12 +22,25 @@ class CursoController extends Controller
     }
     public function store(Request $request)
     {
-        
-        $request->validate([
-            'nome'=>'required',
-            'duracao'=>'required',
-            'numero_de_disciplinas'=>'required',
-            'preco'=>'required',
+        $this->validate($request,[
+            'nome'=>'required|min:3|max:50',
+            'duracao'=>'required|min:3|max:6|numeric',
+            'numero_de_disciplinas'=>'required|min:30|max:50|numeric',
+            'preco'=>'required|min:5000|max:50000|numeric'
+        ],[
+            'nome.required'=>'Introduz o nome do curso!!',
+            'nome.min'=>'NOME...A quantidade de caracteres nao deve ser menor que 3',
+            'nome.max'=>'NOME...A quantidade de caracteres nao deve ser maior que 50',
+            'duracao.required'=>'Introduz a duracao do curso!!',
+            'duracao.min'=>'DURACAO...Duracao Invalida, os numero devem ser maior que 3',
+            'contacto.max'=>'CONTACTO...Contacto Invalido, os numero devem ser menor que 50',
+            'contacto.numeric'=>'Duracao Invalida,O campo só permite números',
+            'numero_de_disciplinas.required'=>'Introduz o número de disciplinas!!',
+            'numero_de_disciplinas.min'=>'Nr de disciplinas... Invalido, número de cararcteres invalido',
+            'numero_de_disciplinas.max'=>'Nr de disciplinas...Invalido, número de cararcteres invalido',
+            'preco.required'=>'Introduza Preco',
+            'preco.min'=>'O preco de ser maior que 50000 e menor que 50000'
+            
         ]);
 
         $curso = new Curso([
@@ -38,7 +51,7 @@ class CursoController extends Controller
            
         ]);
         $curso->save();
-        return redirect('/curso')->with('message', 'Curso registado com sucesso!');
+        return redirect('/curso')->with('sucess', 'Curso registado com sucesso!');
     }
 
     public function show(Curso $id)
@@ -56,11 +69,25 @@ class CursoController extends Controller
 
     public function update(Request $request, $id)
     {
-        $request->validate([
-            'nome'=>'required',
-            'duracao'=>'required',
-            'numero_de_disciplinas'=>'required',
-            'preco'=>'required'
+        $this->validate($request,[
+            'nome'=>'required|min:3|max:50',
+            'duracao'=>'required|min:3|max:6|numeric',
+            'numero_de_disciplinas'=>'required|min:30|max:50|numeric',
+            'preco'=>'required|min:5000|max:50000|numeric'
+        ],[
+            'nome.required'=>'Introduz o nome do curso!!',
+            'nome.min'=>'NOME...A quantidade de caracteres nao deve ser menor que 3',
+            'nome.max'=>'NOME...A quantidade de caracteres nao deve ser maior que 50',
+            'duracao.required'=>'Introduz a duracao do curso!!',
+            'duracao.min'=>'DURACAO...Duracao Invalida, os numero devem ser maior que 3',
+            'contacto.max'=>'CONTACTO...Contacto Invalido, os numero devem ser menor que 50',
+            'contacto.numeric'=>'Duracao Invalida,O campo só permite números',
+            'numero_de_disciplinas.required'=>'Introduz o número de disciplinas!!',
+            'numero_de_disciplinas.min'=>'Nr de disciplinas... Invalido, número de cararcteres invalido',
+            'numero_de_disciplinas.max'=>'Nr de disciplinas...Invalido, número de cararcteres invalido',
+            'preco.required'=>'Introduza Preco',
+            'preco.min'=>'O preco de ser maior que 50000 e menor que 50000'
+            
         ]);
         $curso = Curso::find($id);
         $curso->nome =  $request->get('nome');
